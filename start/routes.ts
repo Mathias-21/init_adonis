@@ -28,4 +28,6 @@ Route.group(() => {
   Route.resource('/products', 'ProductsController').apiOnly()
   Route.resource('/additionals', 'AdditionalsController').apiOnly()
   Route.resource('/product_additionals', 'ProductAdditionalsController').apiOnly()
+  Route.resource('/orders', 'OrdersController').apiOnly()
+  Route.resource('/orders_product', 'OrderProductsAdditionalsController').apiOnly()
 }).prefix('/api')

@@ -1,9 +1,9 @@
 import { DateTime } from 'luxon'
-import { BaseModel, column, hasOne, HasOne } from '@ioc:Adonis/Lucid/Orm'
+import { BaseModel, column, HasOne, hasOne } from '@ioc:Adonis/Lucid/Orm'
 import ProductAdditional from './ProductAdditional'
 export default class Product extends BaseModel {
   @hasOne(() => ProductAdditional)
-  public productAdditional: HasOne<typeof ProductAdditional>
+  public productAdditionalsId: HasOne<typeof ProductAdditional>
 
   @column({ isPrimary: true })
   public id: number
