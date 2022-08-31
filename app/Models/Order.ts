@@ -1,4 +1,3 @@
-import ProductAdditional from './ProductAdditional'
 import { DateTime } from 'luxon'
 import { BaseModel, column, HasMany, hasMany } from '@ioc:Adonis/Lucid/Orm'
 import OrderProductAdditionals from './OrderProductAdditionals'
@@ -6,9 +5,6 @@ import OrderProductAdditionals from './OrderProductAdditionals'
 export default class Order extends BaseModel {
   @hasMany(() => OrderProductAdditionals)
   public orderProductAdditionals: HasMany<typeof OrderProductAdditionals>
-
-  @hasMany(() => ProductAdditional)
-  public productsAdditionals: HasMany<typeof ProductAdditional>
 
   @column({ isPrimary: true })
   public id: number
