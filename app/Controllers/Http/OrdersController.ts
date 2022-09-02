@@ -21,7 +21,7 @@ export default class OrdersController {
             relations: {
               productAdditional: {
                 fields: {
-                  omit: ['id', 'product_id', 'additional_id', 'created_at', 'updated_at'],
+                  omit: ['product_id', 'additional_id', 'created_at', 'updated_at'],
                 },
                 relations: {
                   product: {
